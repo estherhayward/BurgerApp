@@ -53,4 +53,32 @@ public class Burger {
         }
     }
 
+    private String getTopping(int i) {
+        switch (i) {
+            case 1:
+                return this.toppingName1;
+            case 2:
+                return this.toppingName2;
+            case 3:
+                return this.toppingName3;
+            case 4:
+                return this.toppingName4;
+        }
+        return null;
+    }
+
+    private double getToppingPrice(int i) {
+        switch (i) {
+            case 1:
+                return this.toppingPrice1;
+            case 2:
+                return this.toppingPrice2;
+            case 3:
+                return this.toppingPrice3;
+            case 4:
+                return this.toppingPrice4;
+        }
+        return 0;
+    }
+
 }
