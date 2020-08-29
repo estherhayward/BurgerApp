@@ -81,4 +81,23 @@ public class Burger {
         return 0;
     }
 
+    private double hasTopping(double price) {
+        for (int i = 1; i < 5; i++) {
+            if (getTopping(i) != null) {
+                System.out.println("Added " + getTopping(i) + " for an extra " + getToppingPrice(i));
+                price+= getToppingPrice(i);
+            }
+        }
+        return price;
+    }
+
+    public double showOrder() {
+        double totalPrice = this.price;
+        System.out.println("You've ordered the " + this.name + " burger on a " +
+                this.breadType + " with " + this.meat + ", the price is " + this.price);
+
+        return totalPrice = hasTopping(totalPrice);
+
+    }
+
 }
