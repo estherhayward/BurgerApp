@@ -18,8 +18,8 @@ public class Main {
         healthy.addTopping("avocado", 2);
         healthy.addTopping("cheese", 1.5);
         healthy.addTopping("pickles", 0.75);
+        healthy.addTopping("egg", 1.5);
 
-        healthy.showOrder();
-
+        System.out.println("You're total order is " + healthy.showOrder());
     }
 }

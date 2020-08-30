@@ -97,7 +97,6 @@ public class Burger {
         System.out.println("You've ordered the " + this.name + " burger on a " +
                 this.breadType + " bun with " + this.meatTopping + ", the price is " + this.price);
 
-        return totalPrice = hasTopping(totalPrice);
+        return hasTopping(totalPrice);
     }
-
 }

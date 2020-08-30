@@ -16,26 +16,25 @@ public class HealthyBurger extends Burger {
     @Override
     public void addTopping(String name, double price) {
         if (this.count < 5) {
-            System.out.println("count: " + count);
             this.count++;
             super.addTopping(name, price);
         } else if (this.count < 7) {
             switch (this.count) {
                 case 5:
-                    System.out.println("count: " + this.count);
                     this.toppingName5 = name;
                     this.toppingPrice5 = price;
                     this.count++;
                     break;
                 case 6:
-                    System.out.println("count: " + this.count);
                     this.toppingName6 = name;
                     this.toppingPrice6 = price;
                     this.count++;
                     break;
             }
         } else {
-                System.out.println("Maximum number of Toppings reached.");
+                this.count++;
+            System.out.println("count: " + this.count);
+                System.out.println("Maximum number of toppings reached.");
             }
         }
 
@@ -60,5 +59,22 @@ public class HealthyBurger extends Burger {
         return 0;
     }
 
+    private double hasTopping(double price) {
+        for (int i = 1; i < 7; i++) {
+            if (getTopping(i) != null) {
+                System.out.println("  Added " + getTopping(i) +
+                        " for an extra " + getToppingPrice(i));
+                price+= getToppingPrice(i);
+            }
+        }
+        return price;
     }
+
+    public double showOrder() {
+        double totalPrice = super.showOrder();
+
+        return hasTopping(totalPrice);
+    }
+ga .
+}
 
