@@ -16,6 +16,9 @@ public class Main {
         healthy.addTopping("mushrooms", 1.2);
         healthy.addTopping("onions", 0.9);
         healthy.addTopping("avocado", 2);
+        healthy.addTopping("cheese", 1.5);
+        healthy.addTopping("pickles", 0.75);
+
         healthy.showOrder();
 
     }

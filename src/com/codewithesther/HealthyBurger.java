@@ -38,5 +38,27 @@ public class HealthyBurger extends Burger {
                 System.out.println("Maximum number of Toppings reached.");
             }
         }
+
+
+    private String getTopping(int i) {
+        switch (i) {
+            case 5:
+                return this.toppingName5;
+            case 6:
+                return this.toppingName6;
+        }
+        return null;
+    }
+
+    private double getToppingPrice(int i) {
+        switch (i) {
+            case 5:
+                return this.toppingPrice5;
+            case 6:
+                return this.toppingPrice6;
+        }
+        return 0;
+    }
+
     }
 
