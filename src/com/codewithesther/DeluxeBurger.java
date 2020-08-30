@@ -8,4 +8,8 @@ public class DeluxeBurger extends Burger {
         super.addTopping("chips", 4.50);
     }
 
+    @Override
+    public void addTopping(String name, double price) {
+        System.out.println("Cannot add additional items for the deluxe burger");
+    }
 }
