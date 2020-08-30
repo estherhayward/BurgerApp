@@ -49,7 +49,7 @@ public class Burger {
                     break;
             }
         } else {
-            System.out.println("Maximum amount of toppings reached.");
+            System.out.println("Maximum amount of four toppings reached.");
         }
     }
 
@@ -84,7 +84,8 @@ public class Burger {
     private double hasTopping(double price) {
         for (int i = 1; i < 5; i++) {
             if (getTopping(i) != null) {
-                System.out.println("Added " + getTopping(i) + " for an extra " + getToppingPrice(i));
+                System.out.println("  Added " + getTopping(i) +
+                        " for an extra " + getToppingPrice(i));
                 price+= getToppingPrice(i);
             }
         }
@@ -94,10 +95,9 @@ public class Burger {
     public double showOrder() {
         double totalPrice = this.price;
         System.out.println("You've ordered the " + this.name + " burger on a " +
-                this.breadType + " with " + this.meat + ", the price is " + this.price);
+                this.breadType + " bun with " + this.meatTopping + ", the price is " + this.price);
 
         return totalPrice = hasTopping(totalPrice);
-
     }
 
 }
