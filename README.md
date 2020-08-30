@@ -34,5 +34,5 @@ added to the burgers and pricing.
       and then adding totals to final price.
             
 ## Goal
-- To practice for myself
+- To showcase disciplined git usage
 - Apply inheritance and method overriding
