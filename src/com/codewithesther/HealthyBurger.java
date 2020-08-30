@@ -58,7 +58,6 @@ public class HealthyBurger extends Burger {
         }
         return 0;
     }
-
     private double hasTopping(double price) {
         for (int i = 1; i < 7; i++) {
             if (getTopping(i) != null) {
@@ -70,11 +69,12 @@ public class HealthyBurger extends Burger {
         return price;
     }
 
+    @Override
     public double showOrder() {
         double totalPrice = super.showOrder();
 
         return hasTopping(totalPrice);
     }
-ga .
+
 }
 
